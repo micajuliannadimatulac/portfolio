@@ -1,0 +1,101 @@
+.footer {
+    width: 100%;
+    background-color: #251131;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 60px;
+    font-family: "Jersey 10", sans-serif;
+}
+
+.footer-left {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-left img {
+    height: 65px;
+}
+
+.footer-info span {
+    margin: 3px 0;
+    font-size: 40px;
+}
+
+.footer-info span {
+    margin: 3px 0;
+    font-size: 40px;
+}
+
+.footer-info p {
+    margin: 3px 0;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff80;
+}
+
+.footer-info p:hover {
+    margin: 3px 0;
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.footer-info i {
+    margin-right: 8px; /* space between icon and text */
+    color: white;      /* make icons white, match footer */
+}
+
+.footer-info a {
+    text-decoration: none;
+    color: #ffffff80;
+}
+
+.footer-info a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: right;
+    padding-right: 80px;
+}
+
+.footer-right p {
+    font-size: 25px;
+}
+
+.footer-right a {
+    font-size: 12px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    color: #ffffff80;
+}
+
+.footer-right a:hover {
+    color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 30px 20px;
+    }
+
+    .footer-left {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+}

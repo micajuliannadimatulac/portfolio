@@ -1,0 +1,473 @@
+#backToTopContainer {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    opacity: 0; /* hidden initially */
+    pointer-events: none; /* disable clicks when hidden */
+    transition: opacity 0.3s ease; /* smooth fade */
+}
+
+#backToTopContainer.show {
+    opacity: 1;
+    pointer-events: auto; /* enable clicks */
+}
+
+#backToTop {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #ffffff76;
+}
+
+#backToTopText {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 100;
+    padding-top: 5px;
+}
+
+
+
+.home-block-1 {
+    position: relative;
+    width: 100%;
+    height: 87vh;
+    overflow: hidden;
+    margin-top: 100px;
+    background-image: url('home-bg-1.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* Overlay */
+.home-block-1-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 15, 35, 0.5);
+    z-index: 1;
+}
+
+/* Content above overlay */
+.home-block-1-content {
+    position: relative;
+    z-index: 2;
+    padding-left: 15%;
+    padding-top: 5%;
+    text-align: left;
+}
+
+.home-block-1-header {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 5vw; /* scales with screen */
+    padding-bottom: 30px;
+}
+
+.home-block-1-subheader {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: 1.6vw;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.home-block-1-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    max-width: 33vw;
+    padding-bottom: 50px;
+}
+
+.home-button-1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 8px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.home-button-1:hover {
+    background-color: #ffffff76;
+}
+
+/* BLOCK 2 */
+
+.home-block-2 {
+    position: relative;
+    width: 100%;
+    height: 87vh;
+    background-image: url('home-bg-2.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* Overlay */
+.home-block-2-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 15, 35, 0.5);
+    z-index: 1;
+}
+
+/* Image container on right */
+.home-block-2-mica {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;          /* right 50% of block */
+    height: 100%;
+    padding-left: 10%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    z-index: 3;          /* above overlay and content */
+}
+
+.home-block-2-mica img.home-mica {
+    max-height: 90%;
+    width: auto;
+}
+
+/* Content above overlay */
+.home-block-2-content {
+    position: relative;
+    z-index: 2;
+    padding-left: 55%;
+    padding-top: 10%;
+    text-align: left;
+}
+
+.home-block-2-header {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 5vw; /* scales with screen */
+    padding-bottom: 30px;
+}
+
+.home-block-2-subheader {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: 1.6vw;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.home-block-2-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    max-width: 33vw;
+    padding-bottom: 50px;
+}
+
+.home-button-2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 8px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.home-button-2:hover {
+    background-color: rgba(255, 255, 255, 0.462);
+}
+
+
+/* BLOCK 3 */
+
+.home-block-3 {
+    position: relative;
+    width: 100%;
+    height: 87vh;
+    overflow: hidden;
+}
+
+.home-block-3::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('home-bg-3.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transform: scaleX(-1);
+}
+
+
+
+/* Overlay */
+.home-block-3-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(38, 10, 33, 0.675) 50%, rgba(123, 47, 99, 0.522) 100%);
+    z-index: 1;
+}
+
+/* Left column content */
+.home-block-3-content {
+    position: relative;
+    z-index: 2;          /* above overlay */
+    width: 50%;          /* left 50% of block */
+    height: 100%;
+    padding-left: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Image container on right */
+.home-block-3-pc {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;          /* right 50% of block */
+    height: 100%;
+    padding-right: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;          /* above overlay and content */
+}
+
+.home-block-3-pc img.home-pc {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Text styling */
+.home-block-3-header {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 5vw;
+    padding-bottom: 30px;
+}
+
+.home-block-3-subheader {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: 1.6vw;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.home-block-3-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    padding-bottom: 50px;
+    max-width: 33vw;
+}
+
+.home-button-3 {
+    display: inline-block;
+    width: auto;
+    align-self: flex-start;    /* <— THE IMPORTANT FIX */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 8px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+
+.home-button-3:hover {
+    background-color: rgba(255, 255, 255, 0.462);
+}
+
+
+.home-block-4 {
+    position: relative;
+    width: 100%;
+    height: 87vh;
+    background-image: url('home-bg-4.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+/* Overlay */
+.home-block-4-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 15, 35, 0.556);
+    z-index: 1;
+}
+
+/* Content above overlay */
+.home-block-4-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-top: 10%;
+}
+
+.home-block-4-header {
+    font-family: "Jersey 10", sans-serif;
+    font-size: 5vw; /* scales with screen */
+    padding-bottom: 30px;
+}
+
+.home-block-4-subheader {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: 1.6vw;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.home-block-4-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    max-width: 35vw;
+    padding-bottom: 50px;
+    margin: 0 auto;
+}
+
+.home-button-4 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 8px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.home-button-4:hover {
+    background-color: rgba(255, 255, 255, 0.462);
+}
+
+
+
+
+/* Media Queries for smaller screens */
+@media screen and (max-width: 1024px) {
+    .home-block-1-header {
+        font-size: 6vw;
+    }
+
+    .home-block-1-subheader {
+        font-size: 22px;
+    }
+
+    .home-block-1-text {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home-block-1 {
+        height: 70vh;
+    }
+
+    .home-block-1-content {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 10%;
+        text-align: center;
+    }
+
+    .home-block-1-header {
+        font-size: 8vw;
+    }
+
+    .home-block-1-subheader {
+        font-size: 20px;
+    }
+
+    .home-block-1-text {
+        font-size: 14px;
+        max-width: none;
+        width: 90%;
+        margin: 0 auto;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-block-1-content {
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .home-block-1-header {
+        font-size: 6vw;
+    }
+
+    .home-block-1-subheader {
+        font-size: 16px;
+    }
+
+    .home-block-1-text {
+        font-size: 13px;
+        max-width: none;
+        width: 90%;
+        padding-left: 10vw;
+        padding-right: 10vw;
+        margin: 0 auto;
+    }
+}

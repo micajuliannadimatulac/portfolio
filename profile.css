@@ -1,0 +1,582 @@
+/* profile.css */
+html {
+    scroll-behavior: smooth;
+}
+
+/* BACK TO TOP */
+#backToTopContainer {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#backToTopContainer.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#backToTop {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #ffffff76;
+}
+
+#backToTopText {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 100;
+    padding-top: 5px;
+}
+
+/* BLOCK 1 */
+.profile-block-1 {
+    position: relative;
+    width: 100%;
+    height: 87vh;
+    margin-top: 100px;
+    overflow: hidden;
+    background-image: url('profile-bg-1.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.profile-block-1-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(44, 15, 35, 0.38);
+    z-index: 1;
+}
+
+.profile-block-1-content {
+    position: relative;
+    z-index: 2;
+    width: min(1280px, 100%);
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 5.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.profile-block-1-text-side {
+    width: 44%;
+    padding-top: 20px;
+}
+
+.profile-block-1-header {
+    font-family: "Jersey 10", sans-serif;
+    font-size: clamp(60px, 5.3vw, 96px);
+    line-height: 0.95;
+    padding-bottom: 25px;
+}
+
+.profile-block-1-subheader {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: clamp(24px, 1.8vw, 34px);
+    font-weight: 600;
+    padding-bottom: 12px;
+}
+
+.profile-block-1-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(14px, 0.95vw, 18px);
+    font-weight: 300;
+    line-height: 1.85;
+    max-width: 520px;
+}
+
+.profile-block-1-images {
+    position: relative;
+    width: 52%;
+    height: 100%;
+}
+
+.profile-mica {
+    position: absolute;
+    bottom: 0;
+    right: 95px;
+    height: 95%;
+    width: auto;
+    object-fit: contain;
+    z-index: 2;
+}
+
+.profile-avatar {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 255px;
+    height: auto;
+    image-rendering: pixelated;
+    z-index: 3;
+}
+
+.scroll-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.72);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.scroll-arrow {
+    width: 14px;
+    height: 14px;
+    border-right: 2px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+    transform: rotate(45deg);
+}
+
+/* BLOCK 2 */
+.profile-block-2 {
+    position: relative;
+    width: 100%;
+    padding: 70px 5% 65px;
+    background: radial-gradient(37.06% 59.77% at 50% 50%, #81788C 31.27%, #594770 100%);
+    color: white;
+}
+
+.profile-block-2-content {
+    width: min(1300px, 100%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-block-2-header {
+    font-family: "Jersey 10", sans-serif;
+    font-size: clamp(56px, 4.7vw, 84px);
+    margin-bottom: 32px;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 34px;
+    flex-wrap: wrap;
+    margin-bottom: 34px;
+}
+
+.star-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+    text-align: center;
+}
+
+.star {
+    width: 105px;
+    height: auto;
+    image-rendering: pixelated;
+    margin-bottom: 12px;
+}
+
+.star-container span {
+    font-family: "Jersey 10", sans-serif;
+    font-size: clamp(24px, 1.8vw, 34px);
+    line-height: 1.1;
+}
+
+.profile-block-2-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(14px, 0.96vw, 17px);
+    font-weight: 300;
+    line-height: 1.85;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* BLOCK 3 */
+.profile-block-3 {
+    position: relative;
+    width: 100%;
+    min-height: 98vh;
+    background-image: url('profile-bg-3.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.profile-block-3-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(35, 8, 38, 0.58);
+    z-index: 1;
+}
+
+.profile-block-3-inner {
+    position: relative;
+    z-index: 2;
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    padding: 80px 5.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.profile-block-3-left {
+    width: 43%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.profile-block-3-image-wrap {
+    margin-bottom: 28px;
+}
+
+.profile-pc {
+    width: min(360px, 90%);
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.profile-block-3-header {
+    font-family: "Jersey 10", sans-serif;
+    font-size: clamp(56px, 5vw, 92px);
+    line-height: 0.96;
+    margin-bottom: 16px;
+}
+
+.profile-block-3-small-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 18px;
+}
+
+.profile-button-3 {
+    display: inline-block;
+    width: fit-content;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 8px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.profile-button-3:hover {
+    background-color: rgba(255, 255, 255, 0.462);
+}
+
+.profile-block-3-right {
+    width: 48%;
+}
+
+.experience-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.experience-list li {
+    margin-bottom: 22px;
+}
+
+.experience-list h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 4px 0;
+}
+
+.experience-list p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* BLOCK 4 */
+.profile-block-4 {
+    width: 100%;
+    padding: 90px 5% 85px;
+    background: radial-gradient(65% 85% at 50% 50%, #827891 0%, #645474 100%);
+    color: white;
+}
+
+.profile-block-4-inner {
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.profile-block-4-left {
+    width: 42%;
+}
+
+.education-list {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.education-list li {
+    margin-bottom: 34px;
+}
+
+.education-list h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 4px 0;
+}
+
+.education-list p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.55;
+    margin: 0;
+}
+
+.profile-block-4-right {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-cap {
+    width: min(250px, 70%);
+    height: auto;
+    image-rendering: pixelated;
+    margin-bottom: 18px;
+}
+
+.profile-block-4-header {
+    font-family: "Jersey 10", sans-serif;
+    font-size: clamp(58px, 5vw, 92px);
+    line-height: 0.96;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1200px) {
+    .profile-block-1-content,
+    .profile-block-3-inner,
+    .profile-block-4-inner {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .profile-block-1-images {
+        min-height: 620px;
+    }
+
+    .profile-mica {
+        right: 70px;
+    }
+
+    .profile-avatar {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .profile-block-1-content,
+    .profile-block-3-inner,
+    .profile-block-4-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-block-1 {
+        padding-bottom: 50px;
+    }
+
+    .profile-block-1-text-side,
+    .profile-block-1-images,
+    .profile-block-3-left,
+    .profile-block-3-right,
+    .profile-block-4-left,
+    .profile-block-4-right {
+        width: 100%;
+    }
+
+    .profile-block-1-content {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        min-height: auto;
+    }
+
+    .profile-block-1-text {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .profile-block-1-images {
+        min-height: 620px;
+        max-width: 650px;
+        margin: 0 auto;
+    }
+
+    .profile-mica {
+        right: 80px;
+        height: 92%;
+    }
+
+    .profile-avatar {
+        width: 230px;
+        right: 20px;
+    }
+
+    .profile-block-3-left {
+        align-items: center;
+    }
+
+    .profile-button-3 {
+        align-self: center;
+    }
+
+    .profile-block-3-image-wrap {
+        margin-bottom: 20px;
+    }
+
+    .profile-block-3-right,
+    .profile-block-4-left {
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .profile-block-1 {
+        margin-top: 85px;
+    }
+
+    .profile-block-1-content {
+        padding-top: 40px;
+    }
+
+    .profile-block-1-images {
+        min-height: 430px;
+    }
+
+    .profile-mica {
+        right: 45px;
+        height: 100%;
+        max-height: 430px;
+    }
+
+    .profile-avatar {
+        width: 170px;
+        right: 0;
+    }
+
+    .stars {
+        gap: 22px;
+    }
+
+    .star {
+        width: 84px;
+    }
+
+    .star-container {
+        min-width: 120px;
+    }
+
+    .experience-list h4,
+    .education-list h4 {
+        font-size: 18px;
+    }
+
+    .experience-list p,
+    .education-list p {
+        font-size: 14px;
+    }
+
+    .scroll-indicator {
+        font-size: 12px;
+        bottom: 18px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .profile-block-1-content,
+    .profile-block-2,
+    .profile-block-3-inner,
+    .profile-block-4 {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .profile-block-1-images {
+        min-height: 320px;
+    }
+
+    .profile-mica {
+        right: 28px;
+        max-height: 320px;
+    }
+
+    .profile-avatar {
+        width: 120px;
+    }
+
+    .star-container {
+        min-width: 100px;
+    }
+
+    .star {
+        width: 72px;
+    }
+
+    .profile-pc {
+        width: 240px;
+    }
+
+    #backToTopContainer {
+        right: 15px;
+        bottom: 18px;
+    }
+}

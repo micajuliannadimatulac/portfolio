@@ -1,0 +1,10 @@
+/* Start page hidden */
+body {
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+/* When page is fully loaded */
+body.fade-in {
+    opacity: 1;
+}
