@@ -117,14 +117,16 @@ html {
     display: flex;
     align-items: center;
     gap: 25px;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     width: fit-content;
-    transition: 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.25s ease, opacity 0.25s ease, color 0.25s ease;
 }
 
 .contact-item:hover {
-    opacity: 0.8;
+    opacity: 1;
+    transform: translateX(8px);
 }
 
 .contact-item i {
@@ -132,6 +134,7 @@ html {
     font-size: 34px;
     text-align: center;
     flex-shrink: 0;
+    transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .contact-item span {
@@ -139,6 +142,31 @@ html {
     font-size: 15px;
     font-weight: 300;
     line-height: 1.5;
+    position: relative;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.contact-item:hover i {
+    transform: scale(1.1);
+}
+
+.contact-item:hover span {
+    color: #ffd6f0;
+}
+
+.contact-item span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background-color: #ffd6f0;
+    transition: width 0.25s ease;
+}
+
+.contact-item:hover span::after {
+    width: 100%;
 }
 
 .contact-block-1-right {
@@ -202,6 +230,15 @@ html {
 
     .contact-item {
         justify-content: center;
+    }
+
+    .contact-item:hover {
+        transform: translateY(-2px);
+    }
+
+    .contact-item span::after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     .contact-phone {
