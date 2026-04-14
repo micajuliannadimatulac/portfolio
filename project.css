@@ -1,0 +1,465 @@
+/* project.css */
+html {
+    scroll-behavior: smooth;
+}
+
+#featured-projects,
+#creative-archives {
+    scroll-margin-top: 120px;
+}
+
+/* BACK TO TOP */
+#backToTopContainer {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#backToTopContainer.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#backToTop {
+    width: 50px;
+    height: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease;
+}
+
+#backToTop:hover {
+    background-color: #ffffff76;
+}
+
+#backToTopText {
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5px;
+    color: white;
+    font-size: 12px;
+    font-weight: 100;
+    padding-top: 5px;
+}
+
+/* BLOCK 1 */
+.project-block-1 {
+    position: relative;
+    width: 100%;
+    height: 87vh;
+    overflow: hidden;
+    margin-top: 100px;
+    background-image: url('project-bg-1.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.project-block-1-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to left,
+        rgba(146, 50, 116, 0.497) 0%,
+        rgba(146, 50, 116, 0.45) 35%,
+        rgba(44, 15, 35, 0.55) 65%,
+        rgba(44, 15, 35, 0.75) 100%
+    );
+    /*background-color: rgba(44, 15, 35, 0.55);*/
+    z-index: 1;
+}
+
+.project-block-1-content {
+    position: relative;
+    z-index: 2;
+    width: min(1280px, 100%);
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 5.5%;
+    display: flex;
+    align-items: center;
+}
+
+.project-block-1-text-side {
+    width: 42%;
+}
+
+.project-block-1-header {
+    font-family: "Jersey 10", sans-serif;
+    font-size: clamp(64px, 5.5vw, 96px);
+    line-height: 0.95;
+    padding-bottom: 26px;
+}
+
+.project-block-1-subheader {
+    font-family: 'Poppins', sans-serif;
+    font-style: italic;
+    font-size: 1.6vw;
+    font-weight: 500;
+    padding-bottom: 10px;
+}
+
+.project-block-1-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(14px, 0.95vw, 17px);
+    font-weight: 100;
+    line-height: 1.8;
+    max-width: 480px;
+    padding-bottom: 28px;
+}
+
+.project-block-1-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.project-button-1,
+.project-button-2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 8px 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.project-button-1:hover,
+.project-button-2:hover {
+    background-color: rgba(255, 255, 255, 0.462);
+}
+
+.scroll-indicator {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255, 255, 255, 0.72);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.scroll-arrow {
+    width: 14px;
+    height: 14px;
+    border-right: 2px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.8);
+    transform: rotate(45deg);
+}
+
+/* BLOCK 2 */
+.project-block-2 {
+    position: relative;
+    width: 100%;
+    padding: 80px 5% 90px;
+    background: radial-gradient(37.06% 59.77% at 50% 50%, #81788C 31.27%, #594770 100%);
+    color: white;
+}
+
+.project-block-2-content {
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.project-block-2-header {
+    font-family: "Jersey 10", sans-serif;
+    font-size: clamp(56px, 4.8vw, 88px);
+    margin-bottom: 20px;
+}
+
+.project-block-2-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(14px, 0.95vw, 17px);
+    font-weight: 100;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto 38px;
+}
+
+.project-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: left;
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.project-card-thumbnail {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+.project-card-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-card-body {
+    padding: 22px;
+}
+
+.project-card-body h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 10px 0;
+}
+
+.project-card-body p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 1.75;
+    margin: 0 0 18px 0;
+}
+
+.project-card-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.project-card-button {
+    display: inline-block;
+    width: auto;
+    flex: 0 0 auto;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-card-button:hover {
+    background-color: rgba(255, 255, 255, 0.462);
+}
+
+/* BLOCK 3 */
+.project-block-3 {
+    position: relative;
+    width: 100%;
+    padding: 85px 5% 95px;
+    background-image: url('project-bg-3.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+.project-block-3-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(38, 10, 33, 0.62);
+    z-index: 1;
+}
+
+.project-block-3-content {
+    position: relative;
+    z-index: 2;
+    width: min(1280px, 100%);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.project-block-3-header {
+    font-family: "Jersey 10", sans-serif;
+    font-size: clamp(56px, 4.8vw, 88px);
+    margin-bottom: 20px;
+}
+
+.project-block-3-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(14px, 0.95vw, 17px);
+    font-weight: 100;
+    line-height: 1.8;
+    max-width: 760px;
+    margin: 0 auto 40px;
+}
+
+.archive-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.archive-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    padding: 24px;
+    text-align: left;
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.archive-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.archive-card h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0 0 10px 0;
+}
+
+.archive-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 100;
+    line-height: 1.75;
+    margin: 0 0 18px 0;
+}
+
+.archive-button {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 10px;
+    padding: 8px 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.archive-button:hover {
+    background-color: rgba(255, 255, 255, 0.462);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1100px) {
+    .project-block-1 {
+        height: auto;
+        min-height: 700px;
+    }
+
+    .project-block-1-content {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .project-block-1-text-side {
+        width: 55%;
+    }
+
+    .project-card-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .archive-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .project-block-1-content {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .project-block-1-text-side {
+        width: 100%;
+    }
+
+    .project-block-1-text {
+        margin: 0 auto;
+    }
+
+    .project-block-1-buttons {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-block-1 {
+        margin-top: 88px;
+        min-height: 620px;
+    }
+
+    .project-card-grid,
+    .archive-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card-thumbnail {
+        height: 200px;
+    }
+
+    .scroll-indicator {
+        bottom: 18px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .project-block-2,
+    .project-block-3 {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .project-card-body,
+    .archive-card {
+        padding: 18px;
+    }
+
+    #backToTopContainer {
+        right: 15px;
+        bottom: 18px;
+    }
+}

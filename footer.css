@@ -4,6 +4,8 @@
     color: white;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
     padding: 40px 60px;
     font-family: "Jersey 10", sans-serif;
 }
@@ -11,19 +13,18 @@
 .footer-left {
     display: flex;
     gap: 20px;
+    min-width: 0;
 }
 
 .footer-left img {
     height: 65px;
+    width: auto;
+    flex-shrink: 0;
 }
 
 .footer-info span {
-    margin: 3px 0;
-    font-size: 40px;
-}
-
-.footer-info span {
-    margin: 3px 0;
+    display: block;
+    margin: 3px 0 8px;
     font-size: 40px;
 }
 
@@ -32,18 +33,16 @@
     font-size: 12px;
     font-family: 'Poppins', sans-serif;
     color: #ffffff80;
+    line-height: 1.5;
 }
 
 .footer-info p:hover {
-    margin: 3px 0;
-    font-size: 12px;
-    font-family: 'Poppins', sans-serif;
     color: white;
 }
 
 .footer-info i {
-    margin-right: 8px; /* space between icon and text */
-    color: white;      /* make icons white, match footer */
+    margin-right: 8px;
+    color: white;
 }
 
 .footer-info a {
@@ -52,7 +51,6 @@
 }
 
 .footer-info a:hover {
-    text-decoration: none;
     color: white;
 }
 
@@ -61,7 +59,14 @@
     flex-direction: column;
     gap: 5px;
     text-align: right;
-    padding-right: 80px;
+    padding-right: 90px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-right {
+        text-align: center;
+        padding-right: 0;
+    }
 }
 
 .footer-right p {
@@ -79,14 +84,28 @@
     color: white;
 }
 
-/* Responsive */
+@media screen and (max-width: 900px) {
+    .footer {
+        padding: 30px 24px;
+        gap: 20px;
+    }
+
+    .footer-left img {
+        height: 54px;
+    }
+
+    .footer-info span {
+        font-size: 32px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .footer {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        gap: 20px;
-        padding: 30px 20px;
+        gap: 24px;
+        padding: 28px 18px;
     }
 
     .footer-left {
@@ -97,5 +116,6 @@
 
     .footer-right {
         text-align: center;
+        align-items: center;
     }
 }

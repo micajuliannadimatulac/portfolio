@@ -99,15 +99,15 @@ html {
 .profile-block-1-subheader {
     font-family: 'Poppins', sans-serif;
     font-style: italic;
-    font-size: clamp(24px, 1.8vw, 34px);
-    font-weight: 600;
-    padding-bottom: 12px;
+    font-size: clamp(22px, 1.6vw, 30px);
+    font-weight: 500;
+    padding-bottom: 10px;
 }
 
 .profile-block-1-text {
     font-family: 'Poppins', sans-serif;
-    font-size: clamp(14px, 0.95vw, 18px);
-    font-weight: 300;
+    font-size: clamp(14px, 0.96vw, 17px);
+    font-weight: 100;
     line-height: 1.85;
     max-width: 520px;
 }
@@ -121,7 +121,7 @@ html {
 .profile-mica {
     position: absolute;
     bottom: 0;
-    right: 95px;
+    right: -40px;
     height: 95%;
     width: auto;
     object-fit: contain;
@@ -131,8 +131,8 @@ html {
 .profile-avatar {
     position: absolute;
     bottom: 0;
-    right: 0;
-    width: 255px;
+    right: -130px;
+    width: 450px;
     height: auto;
     image-rendering: pixelated;
     z-index: 3;
@@ -216,7 +216,7 @@ html {
 .profile-block-2-text {
     font-family: 'Poppins', sans-serif;
     font-size: clamp(14px, 0.96vw, 17px);
-    font-weight: 300;
+    font-weight: 100;
     line-height: 1.85;
     max-width: 720px;
     margin: 0 auto;
@@ -254,20 +254,25 @@ html {
 }
 
 .profile-block-3-left {
-    width: 43%;
+    width: 38%;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .profile-block-3-image-wrap {
-    margin-bottom: 28px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 24px;
 }
 
-.profile-pc {
-    width: min(360px, 90%);
+.profile-cap-2 {
+    width: min(500px, 100%);
     height: auto;
+    display: block;
     image-rendering: pixelated;
+    margin: 0 auto;
 }
 
 .profile-block-3-header {
@@ -279,57 +284,45 @@ html {
 
 .profile-block-3-small-text {
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    margin-bottom: 18px;
-}
-
-.profile-button-3 {
-    display: inline-block;
-    width: fit-content;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    color: white;
-    background-color: transparent;
-    border: 2px solid white;
-    border-radius: 10px;
-    padding: 8px 25px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-}
-
-.profile-button-3:hover {
-    background-color: rgba(255, 255, 255, 0.462);
+    font-size: clamp(14px, 0.96vw, 17px);
+    font-weight: 100;
+    line-height: 1.7;
+    max-width: 360px;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .profile-block-3-right {
-    width: 48%;
+    width: 52%;
 }
 
-.experience-list {
-    margin: 0;
-    padding-left: 20px;
+.education-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
 }
 
-.experience-list li {
-    margin-bottom: 22px;
+.education-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    padding: 24px;
+    backdrop-filter: blur(4px);
 }
 
-.experience-list h4 {
+.education-card h4 {
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
     font-weight: 700;
     line-height: 1.35;
-    margin: 0 0 4px 0;
+    margin: 0 0 6px 0;
 }
 
-.experience-list p {
+.education-card p {
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: 300;
-    line-height: 1.55;
+    line-height: 1.6;
     margin: 0;
 }
 
@@ -337,75 +330,77 @@ html {
 .profile-block-4 {
     width: 100%;
     padding: 90px 5% 85px;
-    background: radial-gradient(65% 85% at 50% 50%, #827891 0%, #645474 100%);
+    background: radial-gradient(37.06% 59.77% at 50% 50%, #81788C 31.27%, #594770 100%);
     color: white;
 }
 
 .profile-block-4-inner {
     width: min(1280px, 100%);
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
 }
 
-.profile-block-4-left {
-    width: 42%;
-}
-
-.education-list {
-    margin: 0;
-    padding-left: 20px;
-}
-
-.education-list li {
-    margin-bottom: 34px;
-}
-
-.education-list h4 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 22px;
-    font-weight: 700;
-    line-height: 1.35;
-    margin: 0 0 4px 0;
-}
-
-.education-list p {
-    font-family: 'Poppins', sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 1.55;
-    margin: 0;
-}
-
-.profile-block-4-right {
-    width: 48%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.profile-cap {
-    width: min(250px, 70%);
-    height: auto;
-    image-rendering: pixelated;
-    margin-bottom: 18px;
+.profile-block-4-top {
+    text-align: center;
+    margin-bottom: 42px;
 }
 
 .profile-block-4-header {
     font-family: "Jersey 10", sans-serif;
     font-size: clamp(58px, 5vw, 92px);
     line-height: 0.96;
-    text-align: center;
+    margin-bottom: 18px;
+}
+
+.profile-block-4-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: clamp(14px, 0.96vw, 17px);
+    font-weight: 100;
+    line-height: 1.85;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.leadership-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.leadership-card {
+    background: rgba(255, 255, 255, 0.09);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    padding: 26px 24px;
+    text-align: left;
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.leadership-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+.leadership-card h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin: 0 0 8px 0;
+}
+
+.leadership-card p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* RESPONSIVE */
 @media screen and (max-width: 1200px) {
     .profile-block-1-content,
-    .profile-block-3-inner,
-    .profile-block-4-inner {
+    .profile-block-3-inner {
         padding-left: 4%;
         padding-right: 4%;
     }
@@ -415,39 +410,43 @@ html {
     }
 
     .profile-mica {
-        right: 70px;
+        right: 10px;
     }
 
     .profile-avatar {
-        width: 220px;
+        width: 300px;
+        right: -40px;
+    }
+
+    .profile-cap-2 {
+        width: min(420px, 100%);
+    }
+
+    .leadership-grid {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 992px) {
-    .profile-block-1-content,
-    .profile-block-3-inner,
-    .profile-block-4-inner {
-        flex-direction: column;
-        text-align: center;
+    .profile-block-1,
+    .profile-block-3 {
+        height: auto;
+        min-height: 760px;
     }
 
-    .profile-block-1 {
+    .profile-block-1-content,
+    .profile-block-3-inner {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 60px;
         padding-bottom: 50px;
     }
 
     .profile-block-1-text-side,
     .profile-block-1-images,
     .profile-block-3-left,
-    .profile-block-3-right,
-    .profile-block-4-left,
-    .profile-block-4-right {
+    .profile-block-3-right {
         width: 100%;
-    }
-
-    .profile-block-1-content {
-        padding-top: 60px;
-        padding-bottom: 40px;
-        min-height: auto;
     }
 
     .profile-block-1-text {
@@ -456,60 +455,57 @@ html {
     }
 
     .profile-block-1-images {
-        min-height: 620px;
-        max-width: 650px;
+        min-height: 520px;
+        max-width: 620px;
         margin: 0 auto;
     }
 
     .profile-mica {
-        right: 80px;
+        right: 40px;
         height: 92%;
     }
 
     .profile-avatar {
-        width: 230px;
-        right: 20px;
+        width: 240px;
+        right: 0;
     }
 
     .profile-block-3-left {
         align-items: center;
     }
 
-    .profile-button-3 {
-        align-self: center;
+    .profile-cap-2 {
+        width: min(340px, 100%);
     }
 
-    .profile-block-3-image-wrap {
-        margin-bottom: 20px;
+    .profile-block-3-small-text {
+        max-width: 700px;
+        text-align: center;
     }
 
-    .profile-block-3-right,
-    .profile-block-4-left {
+    .profile-block-3-right {
         text-align: left;
     }
 }
 
 @media screen and (max-width: 768px) {
     .profile-block-1 {
-        margin-top: 85px;
-    }
-
-    .profile-block-1-content {
-        padding-top: 40px;
+        margin-top: 88px;
+        min-height: 660px;
     }
 
     .profile-block-1-images {
-        min-height: 430px;
+        min-height: 380px;
     }
 
     .profile-mica {
-        right: 45px;
+        right: 20px;
         height: 100%;
-        max-height: 430px;
+        max-height: 380px;
     }
 
     .profile-avatar {
-        width: 170px;
+        width: 150px;
         right: 0;
     }
 
@@ -525,14 +521,22 @@ html {
         min-width: 120px;
     }
 
-    .experience-list h4,
-    .education-list h4 {
+    .profile-cap-2 {
+        width: min(260px, 100%);
+    }
+
+    .education-card h4,
+    .leadership-card h4 {
         font-size: 18px;
     }
 
-    .experience-list p,
-    .education-list p {
+    .education-card p,
+    .leadership-card p {
         font-size: 14px;
+    }
+
+    .leadership-grid {
+        grid-template-columns: 1fr;
     }
 
     .scroll-indicator {
@@ -551,16 +555,16 @@ html {
     }
 
     .profile-block-1-images {
-        min-height: 320px;
+        min-height: 300px;
     }
 
     .profile-mica {
-        right: 28px;
-        max-height: 320px;
+        right: 10px;
+        max-height: 300px;
     }
 
     .profile-avatar {
-        width: 120px;
+        width: 115px;
     }
 
     .star-container {
@@ -571,8 +575,8 @@ html {
         width: 72px;
     }
 
-    .profile-pc {
-        width: 240px;
+    .profile-cap-2 {
+        width: min(210px, 100%);
     }
 
     #backToTopContainer {
