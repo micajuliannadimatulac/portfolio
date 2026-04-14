@@ -108,7 +108,6 @@ html {
     font-family: 'Poppins', sans-serif;
     font-size: clamp(14px, 0.96vw, 17px);
     font-weight: 100;
-    line-height: 1.85;
     max-width: 520px;
 }
 
@@ -217,7 +216,6 @@ html {
     font-family: 'Poppins', sans-serif;
     font-size: clamp(14px, 0.96vw, 17px);
     font-weight: 100;
-    line-height: 1.85;
     max-width: 720px;
     margin: 0 auto;
 }
@@ -258,11 +256,14 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .profile-block-3-image-wrap {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100%;
     margin-bottom: 24px;
 }
@@ -280,16 +281,21 @@ html {
     font-size: clamp(56px, 5vw, 92px);
     line-height: 0.96;
     margin-bottom: 16px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    top: -50px;
 }
 
 .profile-block-3-small-text {
     font-family: 'Poppins', sans-serif;
     font-size: clamp(14px, 0.96vw, 17px);
     font-weight: 100;
-    line-height: 1.7;
     max-width: 360px;
     text-align: center;
     margin: 0 auto;
+    position: relative;
+    top: -50px;
 }
 
 .profile-block-3-right {
@@ -314,7 +320,7 @@ html {
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
     font-weight: 700;
-    line-height: 1.35;
+    line-height: 1;
     margin: 0 0 6px 0;
 }
 
@@ -355,8 +361,7 @@ html {
     font-family: 'Poppins', sans-serif;
     font-size: clamp(14px, 0.96vw, 17px);
     font-weight: 100;
-    line-height: 1.85;
-    max-width: 760px;
+    max-width: 650px;
     margin: 0 auto;
 }
 
